@@ -1,21 +1,21 @@
-#vidjot
-##Bootstrap 4 Website
+# vidjot
+## Bootstrap 4 Website
 
-##Author
+## Author
 Disane
 
-##Programming Language
+## Programming Language
 JavaScript ES6, HTML5/CSS
 
-##Framework
+## Framework
 node.js
 MongoDb
 
-##Description
+## Description
 Based on Boostrap project "vidjot" from
 https://www.udemy.com/bootstrap-4-from-scratch-with-5-projects/
 for storing and viewing YouTube video ideas.
 
-##Usage
+## Usage
 Navigate to vidjot folder
 nodemon app.js
