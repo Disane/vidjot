@@ -7,8 +7,10 @@ Disane
 ## Programming Language
 JavaScript ES6, HTML5/CSS
 
-## Framework
-node.js
+## Techonology
+NodeJS
+Handlebars
+Passport / Passport-Local
 MongoDb
 
 ## Description
@@ -17,5 +19,12 @@ https://www.udemy.com/bootstrap-4-from-scratch-with-5-projects/
 for storing and viewing YouTube video ideas.
 
 ## Usage
+setup environment variables:
+export VIDJOT_URL=[mlab_url_to_database]
+export NODE_ENV=production 
+The latter is not required. In that case you'll be running the app in development mode.
+Make sure that in that case you have MongoDB setup locally.
+
 Navigate to vidjot folder
-nodemon app.js
+npm start
+

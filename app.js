@@ -17,11 +17,14 @@ const users = require('./routes/users');
 // Passport Config
 require('./config/passport')(passport);
 
+// DB Config
+const db = require('./config/database');
+
 // fix Mongoose Proimise warning
 mongoose.Promise = global.Promise;
 
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/vidjot-dev', { useNewUrlParser: true })
+mongoose.connect(db.mongoURL, { useNewUrlParser: true })
 .then(() => console.log("MongoDB Connected!"))
 .catch(err => console.log(err));
 
@@ -85,7 +88,9 @@ app.get('/about', (req, res) => {
 app.use('/ideas', ideas);
 app.use('/users', users);
 
-const port = 5000;
+// use environment suggested port number, or if it is not defined
+// use port 5000 by default
+const port = process.env.PORT || 5000;
 
 app.listen(port,()=>{
     console.log(`Server started on port ${port}`);
